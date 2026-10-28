@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CHANGE PAGE TITLE AND DESCRIPTION HERE -->
+  <title>Tiles &amp; Building Materials Dealer in [City] | Your Business Name</title>
+  <meta name="description" content="Tiles, sanitaryware, plumbing, electricals and hardware - local dealer and distributor.">
+
+  <style>
+    /* =========================================================
+       TEMPLATE 2 - SECTIONED LAYOUT
+       Each section is a separate block (panel) on a grey page.
+       Edit the colours below to match your brand.
+       ========================================================= */
+    :root {
+      --color-primary: #2f3437;      /* Main brand colour (charcoal) */
+      --color-accent: #c0562f;       /* Highlight colour (terracotta) */
+      --color-accent-light: #fbeee8;
+      --color-text: #2f3437;
+      --color-muted: #6b7175;
+      --color-page: #eceeef;         /* Page background behind the blocks */
+      --color-panel: #ffffff;        /* Block background */
+      --color-border: #d9dcde;
+      --radius: 8px;
+      --max-width: 1140px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-text);
+      background: var(--color-page);
+    }
+
+    h1, h2, h3 { line-height: 1.25; margin: 0 0 0.5em; color: var(--color-primary); }
+    p { margin: 0 0 1em; }
+    a { color: var(--color-accent); }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ---------- Section blocks ---------- */
+    main { padding: 16px 0 32px; }
+    .block {
+      background: var(--color-panel);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      margin-bottom: 16px;
+      scroll-margin-top: 120px;      /* Keeps the block clear of the sticky header after a nav click */
+    }
+    .block-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      background: var(--color-accent-light);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .block h2 { font-size: 1.6rem; }
+    .block-intro { color: var(--color-muted); max-width: 680px; }
+
+    .image-placeholder {
+      background: #f3f4f5;
+      border: 2px dashed var(--color-border);
+      border-radius: var(--radius);
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--color-muted);
+      font-size: 0.9rem;
+      padding: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: var(--radius);
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--color-accent); color: #ffffff; }
+    .btn-secondary { border-color: var(--color-primary); color: var(--color-primary); }
+    .btn-whatsapp { background: #25d366; color: #ffffff; }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      background: var(--color-primary);
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+    .logo-placeholder {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      border: 2px dashed rgba(255,255,255,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      font-weight: 400;
+    }
+    .main-nav { width: 100%; }
+    .main-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .main-nav a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.08);
+    }
+    .main-nav a:hover { background: var(--color-accent); }
+
+    /* ---------- Hero ---------- */
+    .hero-grid { display: grid; gap: 24px; }
+    .hero h1 { font-size: 1.9rem; }
+    .hero p { color: var(--color-muted); font-size: 1.05rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .hero-stats {
+      list-style: none;
+      margin: 24px 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      text-align: center;
+    }
+    .hero-stats li {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 10px 4px;
+      font-size: 0.8rem;
+      color: var(--color-muted);
+    }
+    .hero-stats strong { display: block; font-size: 1.3rem; color: var(--color-accent); }
+
+    /* ---------- About ---------- */
+    .about-grid { display: grid; gap: 24px; }
+    .about-points { margin: 0; padding-left: 20px; }
+    .about-points li { margin-bottom: 6px; }
+
+    /* ---------- Products ---------- */
+    .category-grid {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+    }
+    .category-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--color-panel);
+    }
+    .category-card .image-placeholder {
+      min-height: 140px;
+      border: 0;
+      border-radius: 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .category-body { padding: 16px; }
+    .category-body h3 { font-size: 1.15rem; }
+    .category-body p { color: var(--color-muted); font-size: 0.93rem; margin: 0; }
+
+    /* ---------- Why Choose Us ---------- */
+    .feature-grid {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .feature-grid li {
+      background: var(--color-accent-light);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .feature-grid h3 { font-size: 1.05rem; color: var(--color-accent); margin-bottom: 4px; }
+    .feature-grid p { margin: 0; font-size: 0.93rem; }
+
+    /* ---------- Contact ---------- */
+    .contact-cards {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .contact-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .contact-card h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-muted);
+      margin-bottom: 6px;
+    }
+    .contact-card p, .contact-card address { margin: 0; font-style: normal; }
+    .form-block {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .form-block iframe { width: 100%; min-height: 640px; border: 0; }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background: var(--color-primary);
+      color: #c7cbce;
+      padding: 28px 0;
+      font-size: 0.9rem;
+    }
+    .footer-grid { display: grid; gap: 16px; }
+    .site-footer a { color: #ffffff; }
+    .site-footer p { margin: 0 0 4px; }
+    .footer-name { color: #ffffff; font-weight: 700; }
+
+    /* =========================================================
+       TABLET (600px and wider)
+       ========================================================= */
+    @media (min-width: 600px) {
+      .block { padding: 36px 32px; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .feature-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-cards { grid-template-columns: repeat(2, 1fr); }
+      .hero h1 { font-size: 2.3rem; }
+    }
+
+    /* =========================================================
+       DESKTOP (900px and wider)
+       ========================================================= */
+    @media (min-width: 900px) {
+      main { padding: 24px 0 48px; }
+      .block { padding: 48px; margin-bottom: 24px; scroll-margin-top: 88px; }
+      .main-nav { width: auto; }
+      .hero-grid { grid-template-columns: 1.1fr 1fr; align-items: center; gap: 40px; }
+      .hero h1 { font-size: 2.7rem; }
+      .hero .image-placeholder { min-height: 340px; }
+      .about-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .category-grid { grid-template-columns: repeat(5, 1fr); }
+      .feature-grid { grid-template-columns: repeat(3, 1fr); }
+      .contact-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 32px; align-items: start; }
+      .contact-cards { grid-template-columns: 1fr; margin-top: 0; }
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">
+        <!-- INSERT LOGO HERE -->
+        <!-- Example: <img src="images/logo.png" alt="Your Business Name logo" width="40" height="40"> -->
+        <span class="logo-placeholder">LOGO</span>
+        <!-- CHANGE BUSINESS NAME HERE -->
+        <span>Your Business Name</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ===================== BLOCK 1: HERO / HOME ===================== -->
+    <section class="block hero" id="home">
+      <div class="hero-grid">
+        <div>
+          <span class="block-label">Welcome</span>
+          <h1>Everything You Need to Build, Renovate and Repair</h1>
+          <p>Tiles, sanitaryware, plumbing, electricals and hardware from one trusted local dealer and distributor.</p>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Browse Categories</a>
+            <a href="#contact" class="btn btn-secondary">Contact Us</a>
+          </div>
+          <!-- EDIT THESE NUMBERS HERE -->
+          <ul class="hero-stats">
+            <li><strong>[XX]+</strong>Years</li>
+            <li><strong>[XX]+</strong>Brands</li>
+            <li><strong>[XXXX]+</strong>Customers</li>
+          </ul>
+        </div>
+        <!-- ADD HERO / SHOWROOM PHOTO HERE -->
+        <!-- Example: <img src="images/hero.jpg" alt="Our tile showroom"> -->
+        <div class="image-placeholder">Hero photo<br>(showroom or tile display)</div>
+      </div>
+    </section>
+
+    <!-- ===================== BLOCK 2: ABOUT ===================== -->
+    <section class="block" id="about">
+      <span class="block-label">About Us</span>
+      <div class="about-grid">
+        <div>
+          <h2>A Local Name You Can Trust</h2>
+          <!-- EDIT ABOUT TEXT HERE -->
+          <p>Your Business Name is a [family-run] dealer and distributor of building materials. We supply homeowners, contractors, architects and builders.</p>
+          <p>Our showroom displays a large range of tiles and bathroom products. Our warehouse keeps stock ready for quick delivery.</p>
+        </div>
+        <div>
+          <h3>We Serve</h3>
+          <ul class="about-points">
+            <li>Homeowners and families</li>
+            <li>Builders and contractors</li>
+            <li>Architects and interior designers</li>
+            <li>Retailers (bulk and distribution orders)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BLOCK 3: PRODUCT CATEGORIES ===================== -->
+    <section class="block" id="products">
+      <span class="block-label">Products</span>
+      <h2>Product Categories</h2>
+      <p class="block-intro">Choose from five main categories. Visit our showroom to see the full range.</p>
+
+      <ul class="category-grid">
+        <li class="category-card">
+          <!-- ADD PRODUCT IMAGES HERE: Tiles -->
+          <!-- Example: <img src="images/tiles.jpg" alt="Tiles"> -->
+          <div class="image-placeholder">Tiles image</div>
+          <div class="category-body">
+            <h3>Tiles</h3>
+            <p>Floor, wall, vitrified, ceramic and outdoor tiles.</p>
+          </div>
+        </li>
+        <li class="category-card">
+          <!-- ADD PRODUCT IMAGES HERE: Sanitaryware -->
+          <div class="image-placeholder">Sanitaryware image</div>
+          <div class="category-body">
+            <h3>Sanitaryware</h3>
+            <p>Basins, closets, showers and bath fittings.</p>
+          </div>
+        </li>
+        <li class="category-card">
+          <!-- ADD PRODUCT IMAGES HERE: Plumbing -->
+          <div class="image-placeholder">Plumbing image</div>
+          <div class="category-body">
+            <h3>Plumbing</h3>
+            <p>Pipes, fittings, valves, taps and tanks.</p>
+          </div>
+        </li>
+        <li class="category-card">
+          <!-- ADD PRODUCT IMAGES HERE: Electricals -->
+          <div class="image-placeholder">Electricals image</div>
+          <div class="category-body">
+            <h3>Electricals</h3>
+            <p>Wires, switches, MCBs, fans and lights.</p>
+          </div>
+        </li>
+        <li class="category-card">
+          <!-- ADD PRODUCT IMAGES HERE: Hardware -->
+          <div class="image-placeholder">Hardware image</div>
+          <div class="category-body">
+            <h3>Hardware</h3>
+            <p>Locks, hinges, handles, tools and fasteners.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== BLOCK 4: WHY CHOOSE US ===================== -->
+    <section class="block" id="why-us">
+      <span class="block-label">Why Choose Us</span>
+      <h2>Key Highlights</h2>
+      <ul class="feature-grid">
+        <li><h3>One-Stop Shop</h3><p>All building materials available in one place.</p></li>
+        <li><h3>Trusted Brands</h3><p>Genuine products with manufacturer warranty.</p></li>
+        <li><h3>Best Prices</h3><p>Special rates for contractors and bulk orders.</p></li>
+        <li><h3>Ready Stock</h3><p>Large warehouse with stock ready for pickup.</p></li>
+        <li><h3>Fast Delivery</h3><p>Reliable delivery to your home or site.</p></li>
+        <li><h3>Helpful Staff</h3><p>Expert guidance to choose the right products.</p></li>
+      </ul>
+    </section>
+
+    <!-- ===================== BLOCK 5: CONTACT ===================== -->
+    <section class="block" id="contact">
+      <span class="block-label">Contact</span>
+      <h2>Get in Touch</h2>
+      <p class="block-intro">Call, message, or visit us. You can also send an enquiry using the form.</p>
+
+      <div class="contact-layout">
+        <ul class="contact-cards">
+          <li class="contact-card">
+            <h3>Address</h3>
+            <!-- INSERT ADDRESS HERE -->
+            <address>
+              [Shop / Building No.], [Street Name],<br>
+              [Area], [City] &ndash; [PIN Code],<br>
+              [State], India
+            </address>
+          </li>
+          <li class="contact-card">
+            <h3>Phone</h3>
+            <!-- INSERT PHONE NUMBER HERE -->
+            <p><a href="tel:+910000000000">+91 00000 00000</a></p>
+          </li>
+          <li class="contact-card">
+            <h3>Email</h3>
+            <!-- INSERT EMAIL HERE -->
+            <p><a href="mailto:enquiry@example.com">enquiry@example.com</a></p>
+          </li>
+          <li class="contact-card">
+            <h3>WhatsApp</h3>
+            <!-- INSERT WHATSAPP NUMBER HERE -->
+            <!-- Replace 910000000000 with your number: country code + number, no "+" or spaces -->
+            <p><a class="btn btn-whatsapp" href="https://wa.me/910000000000?text=Hello%2C%20I%20have%20an%20enquiry.">Chat on WhatsApp</a></p>
+          </li>
+        </ul>
+
+        <div class="form-block">
+          <h3>Enquiry Form</h3>
+          <!-- PASTE GOOGLE FORM EMBED CODE HERE -->
+          <!-- In Google Forms: Send > Embed (&lt;&gt;) > Copy the iframe code and paste it below.
+               Example:
+               <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" title="Enquiry form" loading="lazy">Loading...</iframe>
+          -->
+          <div class="image-placeholder">Google Form will appear here</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <!-- CHANGE BUSINESS NAME HERE -->
+        <p class="footer-name">Your Business Name</p>
+        <p>Dealer and distributor of tiles and building materials.</p>
+      </div>
+      <div>
+        <!-- EDIT BUSINESS HOURS HERE -->
+        <p class="footer-name">Hours</p>
+        <p>Mon - Sat: [9:30 AM - 8:00 PM]</p>
+        <p>Sunday: [Closed]</p>
+      </div>
+      <div>
+        <p class="footer-name">Contact</p>
+        <!-- INSERT PHONE NUMBER HERE -->
+        <p><a href="tel:+910000000000">+91 00000 00000</a></p>
+        <p><a href="mailto:enquiry@example.com">enquiry@example.com</a></p>
+      </div>
+    </div>
+    <div class="container">
+      <!-- CHANGE YEAR HERE -->
+      <p style="margin-top:16px;">&copy; [Year] Your Business Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

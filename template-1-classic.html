@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CHANGE PAGE TITLE AND DESCRIPTION HERE -->
+  <title>Tiles &amp; Building Materials Dealer in [City] | Your Business Name</title>
+  <meta name="description" content="Local dealer and distributor of tiles, sanitaryware, plumbing, electricals and hardware.">
+
+  <style>
+    /* =========================================================
+       TEMPLATE 1 - CLASSIC LAYOUT
+       Edit the colours below to match your brand.
+       ========================================================= */
+    :root {
+      --color-primary: #1f3a5f;      /* Main brand colour (navy) */
+      --color-accent: #b8860b;       /* Highlight colour (gold) */
+      --color-text: #2b2b2b;
+      --color-muted: #5f6368;
+      --color-bg: #ffffff;
+      --color-bg-alt: #f6f3ee;       /* Light beige for alternate sections */
+      --color-border: #e2ddd5;
+      --max-width: 1100px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--color-text);
+      background: var(--color-bg);
+    }
+
+    h1, h2, h3 { line-height: 1.25; color: var(--color-primary); margin: 0 0 0.6em; }
+    p { margin: 0 0 1em; }
+    a { color: var(--color-primary); }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    section { padding: 48px 0; }
+    section:nth-of-type(even) { background: var(--color-bg-alt); }
+
+    .section-title { text-align: center; font-size: 1.8rem; }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--color-accent);
+      margin: 12px auto 0;
+    }
+    .section-intro {
+      text-align: center;
+      color: var(--color-muted);
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      border-bottom: 3px solid var(--color-accent);
+      background: var(--color-bg);
+      padding: 16px 0;
+      text-align: center;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-placeholder {
+      width: 48px;
+      height: 48px;
+      border: 2px dashed var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: var(--color-muted);
+      font-family: Arial, sans-serif;
+    }
+    .brand-name {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: var(--color-primary);
+    }
+    .main-nav ul {
+      list-style: none;
+      margin: 12px 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 18px;
+    }
+    .main-nav a {
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      color: var(--color-text);
+      padding: 6px 0;
+      display: inline-block;
+    }
+    .main-nav a:hover { color: var(--color-accent); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      background: var(--color-primary);
+      color: #ffffff;
+      text-align: center;
+      padding: 64px 0;
+    }
+    .hero h1 { color: #ffffff; font-size: 2rem; }
+    .hero p { font-size: 1.1rem; max-width: 640px; margin: 0 auto 24px; opacity: 0.92; }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid transparent;
+      border-radius: 4px;
+    }
+    .btn-accent { background: var(--color-accent); color: #ffffff; }
+    .btn-outline { border-color: #ffffff; color: #ffffff; }
+    .btn-whatsapp { background: #25d366; color: #ffffff; }
+    .hero .btn { margin: 6px; }
+
+    /* ---------- About ---------- */
+    .about-grid { display: grid; gap: 24px; }
+    .image-placeholder {
+      background: #e9e5de;
+      border: 2px dashed var(--color-border);
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--color-muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      padding: 16px;
+    }
+
+    /* ---------- Products ---------- */
+    .product-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 20px;
+    }
+    .product-item {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      text-align: center;
+    }
+    .product-item .image-placeholder { min-height: 150px; border: 0; border-bottom: 1px solid var(--color-border); }
+    .product-item h3 { margin: 16px 16px 8px; font-size: 1.2rem; }
+    .product-item p { margin: 0 16px 20px; color: var(--color-muted); font-size: 0.95rem; }
+
+    /* ---------- Why Choose Us ---------- */
+    .highlights {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+    }
+    .highlights li {
+      border-left: 4px solid var(--color-accent);
+      background: var(--color-bg);
+      padding: 16px 20px;
+    }
+    .highlights strong { display: block; color: var(--color-primary); font-size: 1.05rem; }
+    .highlights span { color: var(--color-muted); font-size: 0.95rem; }
+
+    /* ---------- Contact ---------- */
+    .contact-grid { display: grid; gap: 32px; }
+    .contact-details { font-style: normal; }
+    .contact-details p { margin-bottom: 14px; }
+    .contact-details strong { display: block; color: var(--color-primary); }
+    .form-wrapper {
+      border: 1px solid var(--color-border);
+      background: var(--color-bg);
+      padding: 16px;
+    }
+    .form-wrapper iframe { width: 100%; min-height: 600px; border: 0; }
+    .map-placeholder { min-height: 180px; margin-top: 16px; }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background: #16263d;
+      color: #c9d1dc;
+      text-align: center;
+      padding: 28px 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+    }
+    .site-footer a { color: #ffffff; }
+    .site-footer p { margin: 4px 0; }
+
+    /* =========================================================
+       TABLET (600px and wider)
+       ========================================================= */
+    @media (min-width: 600px) {
+      .product-list { grid-template-columns: repeat(2, 1fr); }
+      .highlights { grid-template-columns: repeat(2, 1fr); }
+      .hero h1 { font-size: 2.5rem; }
+    }
+
+    /* =========================================================
+       DESKTOP (900px and wider)
+       ========================================================= */
+    @media (min-width: 900px) {
+      section { padding: 72px 0; }
+      .site-header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .site-header { text-align: left; }
+      .main-nav ul { margin: 0; }
+      .hero { padding: 96px 0; }
+      .hero h1 { font-size: 3rem; }
+      .about-grid { grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; }
+      .product-list { grid-template-columns: repeat(3, 1fr); }
+      .highlights { grid-template-columns: repeat(3, 1fr); }
+      .contact-grid { grid-template-columns: 1fr 1.4fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#home" class="brand">
+        <!-- INSERT LOGO HERE -->
+        <!-- Example: <img src="images/logo.png" alt="Your Business Name logo" width="48" height="48"> -->
+        <span class="logo-placeholder">LOGO</span>
+        <!-- CHANGE BUSINESS NAME HERE -->
+        <span class="brand-name">Your Business Name</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO / HOME ===================== -->
+    <!-- To use a background photo, add to .hero in the CSS:
+         background: linear-gradient(rgba(31,58,95,.8), rgba(31,58,95,.8)), url("images/hero.jpg") center/cover; -->
+    <div class="hero" id="home">
+      <div class="container">
+        <h1>Quality Tiles &amp; Building Materials for Every Home</h1>
+        <p>Your trusted local dealer and distributor for tiles, sanitaryware, plumbing, electricals and hardware. All under one roof.</p>
+        <a href="#products" class="btn btn-accent">View Products</a>
+        <a href="#contact" class="btn btn-outline">Get a Quote</a>
+      </div>
+    </div>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-grid">
+          <div>
+            <!-- EDIT ABOUT TEXT HERE -->
+            <p>Since [Year], Your Business Name has supplied homeowners, builders and contractors with reliable building materials at fair prices.</p>
+            <p>We stock leading brands and a wide range of designs. Our team helps you choose the right products for your budget and project.</p>
+            <p>We serve retail customers, contractors and bulk buyers across [City] and nearby towns.</p>
+          </div>
+          <!-- ADD SHOP / SHOWROOM PHOTO HERE -->
+          <!-- Example: <img src="images/showroom.jpg" alt="Our showroom"> -->
+          <div class="image-placeholder">Showroom photo<br>(replace this box)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCT CATEGORIES ===================== -->
+    <section id="products">
+      <div class="container">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-intro">A complete range of materials for new construction, renovation and repair work.</p>
+
+        <ul class="product-list">
+          <li class="product-item">
+            <!-- ADD PRODUCT IMAGES HERE: Tiles -->
+            <!-- Example: <img src="images/tiles.jpg" alt="Floor and wall tiles"> -->
+            <div class="image-placeholder">Tiles image</div>
+            <h3>Tiles</h3>
+            <p>Floor, wall, vitrified, ceramic, parking and designer tiles.</p>
+          </li>
+          <li class="product-item">
+            <!-- ADD PRODUCT IMAGES HERE: Sanitaryware -->
+            <div class="image-placeholder">Sanitaryware image</div>
+            <h3>Sanitaryware</h3>
+            <p>Wash basins, closets, urinals, bathroom fittings and accessories.</p>
+          </li>
+          <li class="product-item">
+            <!-- ADD PRODUCT IMAGES HERE: Plumbing -->
+            <div class="image-placeholder">Plumbing image</div>
+            <h3>Plumbing</h3>
+            <p>PVC and CPVC pipes, fittings, valves, taps and water tanks.</p>
+          </li>
+          <li class="product-item">
+            <!-- ADD PRODUCT IMAGES HERE: Electricals -->
+            <div class="image-placeholder">Electricals image</div>
+            <h3>Electricals</h3>
+            <p>Wires, cables, switches, sockets, MCBs and lighting.</p>
+          </li>
+          <li class="product-item">
+            <!-- ADD PRODUCT IMAGES HERE: Hardware -->
+            <div class="image-placeholder">Hardware image</div>
+            <h3>Hardware</h3>
+            <p>Door fittings, locks, hinges, tools, adhesives and fasteners.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CHOOSE US ===================== -->
+    <section id="why-us">
+      <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+        <ul class="highlights">
+          <li><strong>Wide Range</strong><span>Thousands of products from trusted brands in one store.</span></li>
+          <li><strong>Fair Prices</strong><span>Competitive rates for retail and bulk orders.</span></li>
+          <li><strong>Genuine Products</strong><span>Original products with full manufacturer warranty.</span></li>
+          <li><strong>Expert Advice</strong><span>Friendly staff to help you choose the right items.</span></li>
+          <li><strong>Local Delivery</strong><span>On-time delivery to your home or site.</span></li>
+          <li><strong>Years of Trust</strong><span>Serving local families and builders for many years.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-intro">Visit our showroom, call us, or send an enquiry using the form.</p>
+
+        <div class="contact-grid">
+          <address class="contact-details">
+            <!-- INSERT ADDRESS HERE -->
+            <p><strong>Address</strong>
+              [Shop / Building No.], [Street Name],<br>
+              [Area], [City] &ndash; [PIN Code],<br>
+              [State], India
+            </p>
+
+            <!-- INSERT PHONE NUMBER HERE -->
+            <p><strong>Phone</strong>
+              <a href="tel:+910000000000">+91 00000 00000</a>
+            </p>
+
+            <!-- INSERT EMAIL HERE -->
+            <p><strong>Email</strong>
+              <a href="mailto:enquiry@example.com">enquiry@example.com</a>
+            </p>
+
+            <!-- EDIT BUSINESS HOURS HERE -->
+            <p><strong>Business Hours</strong>
+              Mon - Sat: [9:30 AM - 8:00 PM]<br>
+              Sunday: [Closed]
+            </p>
+
+            <!-- INSERT WHATSAPP NUMBER HERE -->
+            <!-- Replace 910000000000 with your number: country code + number, no "+" or spaces -->
+            <p>
+              <a class="btn btn-whatsapp" href="https://wa.me/910000000000?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.">Chat on WhatsApp</a>
+            </p>
+
+            <!-- PASTE GOOGLE MAPS EMBED CODE HERE (optional) -->
+            <div class="image-placeholder map-placeholder">Google Map<br>(optional)</div>
+          </address>
+
+          <div class="form-wrapper">
+            <h3>Send an Enquiry</h3>
+            <!-- PASTE GOOGLE FORM EMBED CODE HERE -->
+            <!-- In Google Forms: Send > Embed (&lt;&gt;) > Copy the iframe code and paste it below.
+                 Example:
+                 <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" title="Enquiry form" loading="lazy">Loading...</iframe>
+            -->
+            <div class="image-placeholder">Google Form will appear here</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- CHANGE BUSINESS NAME AND YEAR HERE -->
+      <p>&copy; [Year] Your Business Name. All rights reserved.</p>
+      <p>
+        <!-- INSERT PHONE NUMBER HERE -->
+        <a href="tel:+910000000000">+91 00000 00000</a> &middot;
+        <a href="mailto:enquiry@example.com">enquiry@example.com</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

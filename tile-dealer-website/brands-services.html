@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- INSERT BUSINESS NAME HERE: update the page title and description -->
+  <title>Brands &amp; Services | Your Business Name, [City]</title>
+  <meta name="description" content="Brands of tiles, sanitaryware, plumbing, electrical and hardware products available at Your Business Name in [City], plus product selection help and bulk enquiries.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="topbar on-dark">
+      <div class="container topbar__inner">
+        <!-- INSERT BUSINESS ADDRESS HERE (short version: area and city) and opening hours -->
+        <p class="topbar__info">[Area], [City] &middot; Open Mon&ndash;Sat, [9:30 AM]&ndash;[8:00 PM]</p>
+        <p class="topbar__links">
+          <!-- INSERT PHONE NUMBER HERE -->
+          <a href="tel:+910000000000">Call +91 00000 00000</a>
+          <!-- INSERT WHATSAPP LINK HERE (format: https://wa.me/91XXXXXXXXXX) -->
+          <a href="https://wa.me/910000000000">WhatsApp us</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container header-main">
+      <a class="brand" href="index.html">
+        <!-- INSERT LOGO HERE: replace the four-tile mark below with
+             <img class="brand__logo" src="images/logo.png" alt="" width="42" height="42"> -->
+        <span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span class="brand__text">
+          <!-- INSERT BUSINESS NAME HERE -->
+          <span class="brand__name">Your Business Name</span>
+          <span class="brand__tag">Tiles &amp; Building Materials</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="brands-services.html" aria-current="page">Brands &amp; Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- INSERT PHONE NUMBER HERE -->
+        <a class="header-phone" href="tel:+910000000000"><small>Call the showroom</small>+91 00000 00000</a>
+        <a class="btn btn--primary btn--sm" href="contact.html#enquiry-form">Send enquiry</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero page-hero--brands" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero__content">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li><span aria-current="page">Brands &amp; Services</span></li>
+            </ol>
+          </nav>
+          <h1 id="page-title">Brands &amp; services</h1>
+          <p class="lead">The brands we stock, the help we offer and how we work with each type of customer.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TABS: BRANDS / SERVICES / WHO WE SERVE ===================== -->
+    <section class="section" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Explore</p>
+          <h2 id="explore-title">Brands, services and customer support</h2>
+          <p class="muted">Choose a tab to see the details.</p>
+        </div>
+
+        <!-- CSS-ONLY TABS
+             - Inputs, labels and panels must stay in the same order.
+             - No input is "checked" on purpose, so links such as
+               brands-services.html#services open the matching tab.
+               With no #link, the first tab (Brands) shows. -->
+        <div class="tabs">
+          <input class="tab-input" type="radio" name="brands-services" id="tab-brands" aria-controls="brands">
+          <input class="tab-input" type="radio" name="brands-services" id="tab-services" aria-controls="services">
+          <input class="tab-input" type="radio" name="brands-services" id="tab-customers" aria-controls="customers">
+
+          <div class="tab-list">
+            <p class="tab-hint">Choose a topic</p>
+            <label class="tab-label" for="tab-brands">Brands</label>
+            <label class="tab-label" for="tab-services">Services</label>
+            <label class="tab-label" for="tab-customers">Who we serve</label>
+          </div>
+
+          <div class="tab-panels">
+
+            <!-- ========== PANEL 1: BRANDS ========== -->
+            <section class="tab-panel" id="brands" aria-labelledby="brands-title">
+              <div class="panel-intro">
+                <h3 id="brands-title">Brands we stock</h3>
+                <p class="muted">Products from established manufacturers in every category. Brand availability can change, so ask us for the current list.</p>
+              </div>
+
+              <!-- INSERT BRAND LOGOS HERE
+                   - List only brands you actually stock or are authorised to sell.
+                   - Replace the content of each <li> with:
+                     <img class="brand-logo-img" src="images/brand-name.png" alt="Brand name">
+                   - Delete any extra boxes. -->
+              <div class="brand-group">
+                <h4>Tiles</h4>
+                <ul class="logo-grid logo-grid--4">
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                </ul>
+              </div>
+
+              <div class="brand-group">
+                <h4>Sanitaryware and bath fittings</h4>
+                <ul class="logo-grid logo-grid--4">
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                </ul>
+              </div>
+
+              <div class="brand-group">
+                <h4>Plumbing</h4>
+                <ul class="logo-grid logo-grid--4">
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                </ul>
+              </div>
+
+              <div class="brand-group">
+                <h4>Electricals</h4>
+                <ul class="logo-grid logo-grid--4">
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                </ul>
+              </div>
+
+              <div class="brand-group">
+                <h4>Hardware and tools</h4>
+                <ul class="logo-grid logo-grid--4">
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                  <li class="logo-ph"><strong>[Brand name]</strong>Brand logo</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- ========== PANEL 2: SERVICES ========== -->
+            <!-- EDIT: delete any service you do not offer.
+                 Do not list a service until you have confirmed it. -->
+            <section class="tab-panel" id="services" aria-labelledby="services-title">
+              <div class="panel-intro">
+                <h3 id="services-title">Services</h3>
+                <p class="muted">Support that comes with buying from us. Ask our team about the details for your order.</p>
+              </div>
+
+              <div class="service-grid">
+                <article class="service">
+                  <h4>Product selection help</h4>
+                  <p>Compare designs, sizes, finishes and brands for each room, with advice from our showroom team.</p>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Ask about this<span class="visually-hidden"> service: product selection help</span></a>
+                </article>
+
+                <article class="service">
+                  <!-- EDIT: remove if you do not estimate quantities -->
+                  <h4>Quantity estimates</h4>
+                  <p>Share room sizes or drawings. We help you work out tiles, adhesive and fittings needed.</p>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Ask about this<span class="visually-hidden"> service: quantity estimates</span></a>
+                </article>
+
+                <article class="service">
+                  <h4>Bulk and project enquiries</h4>
+                  <p>Written quotations for larger orders, such as apartments, offices, shops and institutions.</p>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Ask about this<span class="visually-hidden"> service: bulk and project enquiries</span></a>
+                </article>
+
+                <article class="service">
+                  <h4>Contractor support</h4>
+                  <p>Repeat orders, consolidated material lists and stock checks for contractors and site engineers.</p>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Ask about this<span class="visually-hidden"> service: contractor support</span></a>
+                </article>
+
+                <article class="service">
+                  <!-- EDIT: keep only if you supply other dealers or retailers -->
+                  <h4>Dealer and distributor enquiries</h4>
+                  <p>Supply of selected brands to retailers and smaller dealers in [region]. Terms on request.</p>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Ask about this<span class="visually-hidden"> service: dealer and distributor supply</span></a>
+                </article>
+
+                <article class="service">
+                  <!-- EDIT: keep only if you deliver. State your delivery area and charges. -->
+                  <h4>Delivery</h4>
+                  <p>Delivery to your home or site within [service area]. [Charges depend on distance and order size.]</p>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Ask about this<span class="visually-hidden"> service: delivery</span></a>
+                </article>
+              </div>
+            </section>
+
+            <!-- ========== PANEL 3: WHO WE SERVE ========== -->
+            <!-- EDIT: change the lists to match how you work with each customer type -->
+            <section class="tab-panel" id="customers" aria-labelledby="customers-title">
+              <div class="panel-intro">
+                <h3 id="customers-title">Who we serve</h3>
+                <p class="muted">Different customers need different things. Here is how we can help each one.</p>
+              </div>
+
+              <div class="audience-grid">
+                <article class="audience">
+                  <h4>Homeowners</h4>
+                  <p>Building a new home or renovating a room.</p>
+                  <ul>
+                    <li>Showroom visits to see products in person</li>
+                    <li>Help matching tiles, fittings and colours</li>
+                    <li>Clear prices for your budget</li>
+                  </ul>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Send a homeowner enquiry</a>
+                </article>
+
+                <article class="audience">
+                  <h4>Contractors</h4>
+                  <p>Managing several sites and tight schedules.</p>
+                  <ul>
+                    <li>One quote for a full material list</li>
+                    <li>Stock checks before you send labour to site</li>
+                    <!-- EDIT: delete if you do not offer credit -->
+                    <li>[Credit terms for regular customers]</li>
+                  </ul>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Send a contractor enquiry</a>
+                </article>
+
+                <article class="audience">
+                  <h4>Builders and developers</h4>
+                  <p>Supplying apartments, villas and commercial buildings.</p>
+                  <ul>
+                    <li>Project quotations by phase or by floor</li>
+                    <li>Uniform tile batches across units</li>
+                    <li>Planned supply to match site progress</li>
+                  </ul>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Send a builder enquiry</a>
+                </article>
+
+                <article class="audience">
+                  <h4>Plumbers</h4>
+                  <p>Fitting water supply, drainage and bathrooms.</p>
+                  <ul>
+                    <li>Pipes, fittings and valves in common sizes</li>
+                    <li>Sanitaryware and bath fittings in one place</li>
+                    <li>Quick quotes on WhatsApp</li>
+                  </ul>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Send a plumber enquiry</a>
+                </article>
+
+                <article class="audience">
+                  <h4>Electricians</h4>
+                  <p>Wiring homes, shops and offices.</p>
+                  <ul>
+                    <li>Wires, switches, MCBs and boards</li>
+                    <li>Lights and fans from [brand names]</li>
+                    <li>Stock checks for full wiring lists</li>
+                  </ul>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Send an electrician enquiry</a>
+                </article>
+
+                <article class="audience">
+                  <h4>Bulk buyers and retailers</h4>
+                  <p>Buying large quantities or stocking a store.</p>
+                  <ul>
+                    <li>Quotes for large and repeat orders</li>
+                    <!-- EDIT: delete if you do not offer distributor pricing -->
+                    <li>[Distributor pricing for selected brands]</li>
+                    <li>Help planning stock for your area</li>
+                  </ul>
+                  <a class="link-arrow" href="contact.html#enquiry-form">Send a bulk order enquiry</a>
+                </article>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOURCING AND AVAILABILITY ===================== -->
+    <!-- EDIT: describe how your business really sources and stocks products -->
+    <section class="section section--surface" aria-labelledby="sourcing-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Sourcing and availability</p>
+          <h2 id="sourcing-title">How we keep products available</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="info-col">
+            <h3>Where our products come from</h3>
+            <p>We buy from [brand companies / authorised distributors], so you get genuine products with the correct bills and warranty documents.</p>
+          </div>
+          <div class="info-col">
+            <h3>Stock at our store</h3>
+            <p>Popular sizes and designs are usually in stock at our [showroom / warehouse]. Stock changes every day, so please confirm before you visit.</p>
+          </div>
+          <div class="info-col">
+            <h3>Items not in stock</h3>
+            <!-- EDIT: delete this block if you do not take special orders -->
+            <p>We can check with our suppliers and tell you the expected date for items we do not hold.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band on-dark">
+          <div>
+            <h2 id="cta-title">Request product details or a quotation</h2>
+            <p>Tell us the product category, brand, size, quantity and delivery location. We will reply with current prices and availability.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="contact.html#enquiry-form">Request a quotation</a>
+            <!-- INSERT WHATSAPP LINK HERE -->
+            <a class="btn btn--whatsapp" href="https://wa.me/910000000000">Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer on-dark">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <!-- INSERT LOGO HERE (light version for dark background) -->
+            <span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            <span class="brand__text">
+              <!-- INSERT BUSINESS NAME HERE -->
+              <span class="brand__name">Your Business Name</span>
+              <span class="brand__tag">Tiles &amp; Building Materials</span>
+            </span>
+          </a>
+          <p>Dealer and distributor of tiles, sanitaryware, plumbing, electrical and hardware products in [City].</p>
+          <!-- INSERT BUSINESS ADDRESS HERE -->
+          <address>
+            [Shop / Building No.], [Street Name]<br>
+            [Area], [City] &ndash; [PIN Code]<br>
+            [State], India
+          </address>
+        </div>
+
+        <nav aria-labelledby="footer-pages-title">
+          <h2 class="footer-title" id="footer-pages-title">Quick links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="brands-services.html">Brands &amp; Services</a></li>
+            <li><a href="contact.html">Contact &amp; Enquiry</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-products-title">
+          <h2 class="footer-title" id="footer-products-title">Products</h2>
+          <ul class="footer-links">
+            <li><a href="products.html#tiles">Tiles</a></li>
+            <li><a href="products.html#sanitaryware">Sanitaryware</a></li>
+            <li><a href="products.html#plumbing">Plumbing</a></li>
+            <li><a href="products.html#electricals">Electricals</a></li>
+            <li><a href="products.html#hardware">Hardware</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer-title">Contact</h2>
+          <ul class="footer-links">
+            <!-- INSERT PHONE NUMBER HERE -->
+            <li><a href="tel:+910000000000">Phone: +91 00000 00000</a></li>
+            <!-- INSERT WHATSAPP LINK HERE -->
+            <li><a href="https://wa.me/910000000000">WhatsApp: +91 00000 00000</a></li>
+            <!-- INSERT EMAIL HERE -->
+            <li><a href="mailto:enquiry@example.com">enquiry@example.com</a></li>
+            <li>Mon&ndash;Sat: [9:30 AM &ndash; 8:00 PM]<br>Sunday: [Closed]</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; [Year] Your Business Name. All rights reserved.</p>
+        <p>Prices and stock change often. Please contact us for current details.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick-contact bar: shows only on phones and small tablets -->
+  <nav class="quick-actions on-dark" aria-label="Quick contact">
+    <ul>
+      <!-- INSERT PHONE NUMBER HERE -->
+      <li><a href="tel:+910000000000">Call us</a></li>
+      <!-- INSERT WHATSAPP LINK HERE -->
+      <li><a href="https://wa.me/910000000000">WhatsApp</a></li>
+      <li><a href="contact.html#enquiry-form">Send enquiry</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>

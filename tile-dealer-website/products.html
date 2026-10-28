@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- INSERT BUSINESS NAME HERE: update the page title and description -->
+  <title>Tiles, Sanitaryware, Plumbing, Electricals &amp; Hardware in [City] | Your Business Name</title>
+  <meta name="description" content="Browse floor and wall tiles, sanitaryware, plumbing pipes and fittings, electrical supplies and hardware from Your Business Name in [City]. Contact us for current stock and prices.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="topbar on-dark">
+      <div class="container topbar__inner">
+        <!-- INSERT BUSINESS ADDRESS HERE (short version: area and city) and opening hours -->
+        <p class="topbar__info">[Area], [City] &middot; Open Mon&ndash;Sat, [9:30 AM]&ndash;[8:00 PM]</p>
+        <p class="topbar__links">
+          <!-- INSERT PHONE NUMBER HERE -->
+          <a href="tel:+910000000000">Call +91 00000 00000</a>
+          <!-- INSERT WHATSAPP LINK HERE (format: https://wa.me/91XXXXXXXXXX) -->
+          <a href="https://wa.me/910000000000">WhatsApp us</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container header-main">
+      <a class="brand" href="index.html">
+        <!-- INSERT LOGO HERE: replace the four-tile mark below with
+             <img class="brand__logo" src="images/logo.png" alt="" width="42" height="42"> -->
+        <span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span class="brand__text">
+          <!-- INSERT BUSINESS NAME HERE -->
+          <span class="brand__name">Your Business Name</span>
+          <span class="brand__tag">Tiles &amp; Building Materials</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" aria-current="page">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="brands-services.html">Brands &amp; Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- INSERT PHONE NUMBER HERE -->
+        <a class="header-phone" href="tel:+910000000000"><small>Call the showroom</small>+91 00000 00000</a>
+        <a class="btn btn--primary btn--sm" href="contact.html#enquiry-form">Send enquiry</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero page-hero--products" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero__content">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li><span aria-current="page">Products</span></li>
+            </ol>
+          </nav>
+          <h1 id="page-title">Products</h1>
+          <p class="lead">Popular items from our five main categories. Each category has many more designs, sizes and brands in store.</p>
+
+          <div class="notice">
+            <p>Prices and stock change often. Contact us for current availability and pricing.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary btn--sm" href="contact.html#enquiry-form">Ask for a price</a>
+              <!-- INSERT WHATSAPP LINK HERE -->
+              <a class="btn btn--whatsapp btn--sm" href="https://wa.me/910000000000">WhatsApp us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCT TABS ===================== -->
+    <section class="section" aria-labelledby="range-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Browse by category</p>
+          <h2 id="range-title">Find the right product for each job</h2>
+          <p class="muted">Select a category to see popular items. Sizes, finishes and brands depend on current stock.</p>
+        </div>
+
+        <!-- CSS-ONLY TABS
+             - Inputs, labels and panels must stay in the same order.
+             - No input is "checked" on purpose. This lets links such as
+               products.html#plumbing open the matching tab. When no tab is
+               picked and the link has no #category, the first tab shows.
+             - To add a category: add one input, one label and one panel
+               (maximum 6). -->
+        <div class="tabs">
+          <input class="tab-input" type="radio" name="product-category" id="tab-tiles" aria-controls="tiles">
+          <input class="tab-input" type="radio" name="product-category" id="tab-sanitaryware" aria-controls="sanitaryware">
+          <input class="tab-input" type="radio" name="product-category" id="tab-plumbing" aria-controls="plumbing">
+          <input class="tab-input" type="radio" name="product-category" id="tab-electricals" aria-controls="electricals">
+          <input class="tab-input" type="radio" name="product-category" id="tab-hardware" aria-controls="hardware">
+
+          <div class="tab-list">
+            <p class="tab-hint">Choose a category</p>
+            <label class="tab-label" for="tab-tiles">Tiles</label>
+            <label class="tab-label" for="tab-sanitaryware">Sanitaryware</label>
+            <label class="tab-label" for="tab-plumbing">Plumbing</label>
+            <label class="tab-label" for="tab-electricals">Electricals</label>
+            <label class="tab-label" for="tab-hardware">Hardware</label>
+          </div>
+
+          <div class="tab-panels">
+
+            <!-- ========== PANEL 1: TILES ========== -->
+            <section class="tab-panel" id="tiles" aria-labelledby="tiles-title">
+              <div class="panel-head">
+                <div>
+                  <h3 id="tiles-title">Tiles</h3>
+                  <p class="muted">Floor, wall and outdoor tiles for every room. Visit the showroom to see full-size samples and laid-out displays.</p>
+                  <!-- INSERT BRAND LOGOS HERE or brand names for this category -->
+                  <ul class="panel-meta">
+                    <li><strong>Brands:</strong> [Brand name], [Brand name], [Brand name]</li>
+                    <li><strong>Common sizes:</strong> 300 &times; 300 mm to 800 &times; 1600 mm</li>
+                  </ul>
+                </div>
+                <a class="btn btn--primary" href="contact.html#enquiry-form">Enquire about tiles</a>
+              </div>
+
+              <!-- PRICES: replace "On request" with a price such as "&#8377;XX per sq ft" only if you publish prices -->
+              <div class="product-grid">
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE:
+                       <img class="photo" src="images/vitrified-floor-tiles.jpg" alt="Glossy vitrified floor tiles in a living room"> -->
+                  <div class="ph-img ph--marble" role="img" aria-label="Photo placeholder: glossy vitrified floor tiles"><span>Vitrified tiles</span></div>
+                  <div class="card__body">
+                    <h4>Vitrified floor tiles</h4>
+                    <p>Hard-wearing, easy-to-clean tiles for living rooms, offices and shops.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>600 &times; 600, 600 &times; 1200, 800 &times; 1600 mm</dd></div>
+                      <div><dt>Finish</dt><dd>Glossy, matt, satin</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about vitrified floor tiles</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: ceramic wall tiles -->
+                  <div class="ph-img ph--stone" role="img" aria-label="Photo placeholder: ceramic wall tiles"><span>Wall tiles</span></div>
+                  <div class="card__body">
+                    <h4>Ceramic wall tiles</h4>
+                    <p>Plain, patterned and highlighter tiles for interior walls.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>300 &times; 450, 300 &times; 600 mm</dd></div>
+                      <div><dt>Finish</dt><dd>Glossy, matt, textured</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about ceramic wall tiles</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: kitchen and bathroom tiles -->
+                  <div class="ph-img ph--slate ph--mosaic" role="img" aria-label="Photo placeholder: anti-skid bathroom floor tiles"><span>Bathroom tiles</span></div>
+                  <div class="card__body">
+                    <h4>Kitchen and bathroom tiles</h4>
+                    <p>Matching wall and anti-skid floor tiles for wet areas.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>300 &times; 300 floor, 300 &times; 450 wall (mm)</dd></div>
+                      <div><dt>Finish</dt><dd>Anti-skid matt, glossy</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about kitchen and bathroom tiles</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: wood-finish plank tiles -->
+                  <div class="ph-img ph--wood" role="img" aria-label="Photo placeholder: wood-finish plank tiles"><span>Wood-finish tiles</span></div>
+                  <div class="card__body">
+                    <h4>Wood-finish plank tiles</h4>
+                    <p>The look of wooden flooring with the care of a tile.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>200 &times; 1000, 200 &times; 1200 mm</dd></div>
+                      <div><dt>Finish</dt><dd>Matt, wood texture</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about wood-finish plank tiles</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: parking and outdoor tiles -->
+                  <div class="ph-img ph--stone ph--mosaic" role="img" aria-label="Photo placeholder: heavy-duty parking tiles"><span>Parking tiles</span></div>
+                  <div class="card__body">
+                    <h4>Parking and outdoor tiles</h4>
+                    <p>Heavy-duty tiles for driveways, terraces and walkways.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>300 &times; 300, 400 &times; 400 mm</dd></div>
+                      <div><dt>Finish</dt><dd>Rough, anti-skid</dd></div>
+                      <div><dt>Thickness</dt><dd>[XX] mm</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about parking and outdoor tiles</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: elevation tiles -->
+                  <div class="ph-img ph--clay" role="img" aria-label="Photo placeholder: stone-look elevation tiles on an outside wall"><span>Elevation tiles</span></div>
+                  <div class="card__body">
+                    <h4>Elevation and cladding tiles</h4>
+                    <p>Stone and brick-look tiles for front walls and feature areas.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>300 &times; 600 mm, [other sizes]</dd></div>
+                      <div><dt>Finish</dt><dd>Stone, brick, matt</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about elevation and cladding tiles</span></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="panel-foot">
+                <p>Need a design, size or brand not shown here?</p>
+                <a class="link-arrow" href="contact.html#enquiry-form">Ask us about other tiles</a>
+              </div>
+            </section>
+
+            <!-- ========== PANEL 2: SANITARYWARE ========== -->
+            <section class="tab-panel" id="sanitaryware" aria-labelledby="sanitaryware-title">
+              <div class="panel-head">
+                <div>
+                  <h3 id="sanitaryware-title">Sanitaryware</h3>
+                  <p class="muted">Toilets, basins, faucets and bath fittings for new bathrooms and replacements.</p>
+                  <!-- INSERT BRAND LOGOS HERE or brand names for this category -->
+                  <ul class="panel-meta">
+                    <li><strong>Brands:</strong> [Brand name], [Brand name], [Brand name]</li>
+                    <li><strong>Colours:</strong> White, ivory, [other colours]</li>
+                  </ul>
+                </div>
+                <a class="btn btn--primary" href="contact.html#enquiry-form">Enquire about sanitaryware</a>
+              </div>
+
+              <div class="product-grid">
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: toilets -->
+                  <div class="ph-img ph--slate" role="img" aria-label="Photo placeholder: wall-hung toilet"><span>Toilets</span></div>
+                  <div class="card__body">
+                    <h4>Toilets (WC)</h4>
+                    <p>Floor-mounted and wall-hung western toilets, and Indian-style pans.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Types</dt><dd>One-piece, two-piece, wall-hung</dd></div>
+                      <div><dt>Outlet</dt><dd>S-trap, P-trap</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about toilets</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: wash basins -->
+                  <div class="ph-img ph--marble" role="img" aria-label="Photo placeholder: table-top wash basin"><span>Wash basins</span></div>
+                  <div class="card__body">
+                    <h4>Wash basins</h4>
+                    <p>Table-top, wall-mounted and pedestal basins for bathrooms and dining areas.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Types</dt><dd>Table-top, wall-hung, pedestal</dd></div>
+                      <div><dt>Sizes</dt><dd>[Width &times; depth in mm]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about wash basins</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: faucets and mixers -->
+                  <div class="ph-img ph--stone" role="img" aria-label="Photo placeholder: chrome basin mixer"><span>Faucets</span></div>
+                  <div class="card__body">
+                    <h4>Faucets and mixers</h4>
+                    <p>Pillar taps, basin mixers, sink mixers and wall mixers.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Finish</dt><dd>Chrome, matt black, [others]</dd></div>
+                      <div><dt>Material</dt><dd>Brass, [other material]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about faucets and mixers</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: showers -->
+                  <div class="ph-img ph--slate ph--mosaic" role="img" aria-label="Photo placeholder: overhead shower and diverter"><span>Showers</span></div>
+                  <div class="card__body">
+                    <h4>Showers and bath fittings</h4>
+                    <p>Overhead showers, hand showers, diverters and health faucets.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>Overhead [100&ndash;300] mm</dd></div>
+                      <div><dt>Finish</dt><dd>Chrome, [others]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about showers and bath fittings</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: bathroom accessories -->
+                  <div class="ph-img ph--marble" role="img" aria-label="Photo placeholder: towel rod and bathroom shelf"><span>Accessories</span></div>
+                  <div class="card__body">
+                    <h4>Bathroom accessories</h4>
+                    <p>Towel rods, shelves, soap dishes, mirrors and robe hooks.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Material</dt><dd>Stainless steel, brass, glass</dd></div>
+                      <div><dt>Finish</dt><dd>Chrome, matt, [others]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about bathroom accessories</span></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="panel-foot">
+                <p>Planning a full bathroom? Share your layout and we can suggest matching products.</p>
+                <a class="link-arrow" href="contact.html#enquiry-form">Send bathroom details</a>
+              </div>
+            </section>
+
+            <!-- ========== PANEL 3: PLUMBING ========== -->
+            <section class="tab-panel" id="plumbing" aria-labelledby="plumbing-title">
+              <div class="panel-head">
+                <div>
+                  <h3 id="plumbing-title">Plumbing</h3>
+                  <p class="muted">Pipes, fittings, valves and tanks for water supply and drainage.</p>
+                  <!-- INSERT BRAND LOGOS HERE or brand names for this category -->
+                  <ul class="panel-meta">
+                    <li><strong>Brands:</strong> [Brand name], [Brand name], [Brand name]</li>
+                    <li><strong>Sizes:</strong> &frac12; inch to 4 inch, [others]</li>
+                  </ul>
+                </div>
+                <a class="btn btn--primary" href="contact.html#enquiry-form">Enquire about plumbing</a>
+              </div>
+
+              <div class="product-grid">
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: CPVC pipes -->
+                  <div class="ph-img ph--clay" role="img" aria-label="Photo placeholder: CPVC pipes and elbows"><span>CPVC pipes</span></div>
+                  <div class="card__body">
+                    <h4>CPVC pipes and fittings</h4>
+                    <p>For hot and cold water lines in homes and buildings.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>&frac12; in to 2 in</dd></div>
+                      <div><dt>Rating</dt><dd>SDR [11 / 13.5]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about CPVC pipes and fittings</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: uPVC pipes -->
+                  <div class="ph-img ph--stone" role="img" aria-label="Photo placeholder: uPVC pipes"><span>uPVC pipes</span></div>
+                  <div class="card__body">
+                    <h4>uPVC pipes and fittings</h4>
+                    <p>For cold water supply, overhead tank lines and garden lines.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>&frac12; in to 4 in</dd></div>
+                      <div><dt>Schedule</dt><dd>[SCH 40 / SCH 80]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about uPVC pipes and fittings</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: SWR drainage pipes -->
+                  <div class="ph-img ph--slate" role="img" aria-label="Photo placeholder: SWR drainage pipes"><span>Drainage pipes</span></div>
+                  <div class="card__body">
+                    <h4>SWR drainage pipes</h4>
+                    <p>Soil, waste and rainwater pipes with bends, tees and traps.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>75, 110, [other] mm</dd></div>
+                      <div><dt>Type</dt><dd>[Type A / Type B]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about SWR drainage pipes</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: valves -->
+                  <div class="ph-img ph--stone ph--mosaic" role="img" aria-label="Photo placeholder: brass ball valves"><span>Valves</span></div>
+                  <div class="card__body">
+                    <h4>Valves and cocks</h4>
+                    <p>Ball valves, gate valves, bib cocks and angle cocks.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>&frac12; in to 2 in</dd></div>
+                      <div><dt>Material</dt><dd>Brass, PVC, CPVC</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about valves and cocks</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: water tanks -->
+                  <div class="ph-img ph--marble" role="img" aria-label="Photo placeholder: overhead water storage tank"><span>Water tanks</span></div>
+                  <div class="card__body">
+                    <h4>Water storage tanks</h4>
+                    <p>Overhead and underground tanks for homes and buildings.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Capacity</dt><dd>[500] to [5,000] litres</dd></div>
+                      <div><dt>Layers</dt><dd>[3-layer / 4-layer]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about water storage tanks</span></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="panel-foot">
+                <p>Plumbers and contractors: send your material list for a combined quote.</p>
+                <a class="link-arrow" href="contact.html#enquiry-form">Send a plumbing material list</a>
+              </div>
+            </section>
+
+            <!-- ========== PANEL 4: ELECTRICALS ========== -->
+            <section class="tab-panel" id="electricals" aria-labelledby="electricals-title">
+              <div class="panel-head">
+                <div>
+                  <h3 id="electricals-title">Electricals</h3>
+                  <p class="muted">Wiring, switches, protection devices, lights and fans for homes and shops.</p>
+                  <!-- INSERT BRAND LOGOS HERE or brand names for this category -->
+                  <ul class="panel-meta">
+                    <li><strong>Brands:</strong> [Brand name], [Brand name], [Brand name]</li>
+                    <li><strong>Standards:</strong> [ISI marked where applicable]</li>
+                  </ul>
+                </div>
+                <a class="btn btn--primary" href="contact.html#enquiry-form">Enquire about electricals</a>
+              </div>
+
+              <div class="product-grid">
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: wires and cables -->
+                  <div class="ph-img ph--clay" role="img" aria-label="Photo placeholder: coils of house wire"><span>Wires</span></div>
+                  <div class="card__body">
+                    <h4>House wires and cables</h4>
+                    <p>PVC-insulated copper wires for lighting and power circuits.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>0.75 to 6 sq mm</dd></div>
+                      <div><dt>Type</dt><dd>[FR / FRLS], 90 m coils</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about house wires and cables</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: modular switches -->
+                  <div class="ph-img ph--marble" role="img" aria-label="Photo placeholder: white modular switch plate"><span>Switches</span></div>
+                  <div class="card__body">
+                    <h4>Modular switches and sockets</h4>
+                    <p>Switches, sockets, regulators and cover plates.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Ratings</dt><dd>6 A, 16 A</dd></div>
+                      <div><dt>Finish</dt><dd>White, [other colours]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about modular switches and sockets</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: MCBs and distribution boards -->
+                  <div class="ph-img ph--stone" role="img" aria-label="Photo placeholder: MCBs in a distribution board"><span>MCBs</span></div>
+                  <div class="card__body">
+                    <h4>MCBs and distribution boards</h4>
+                    <p>Circuit protection for homes, shops and small offices.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Ratings</dt><dd>6 A to 63 A, SP / DP</dd></div>
+                      <div><dt>Boards</dt><dd>[4] to [16] way</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about MCBs and distribution boards</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: LED lighting -->
+                  <div class="ph-img ph--marble ph--mosaic" role="img" aria-label="Photo placeholder: LED panel and downlights"><span>LED lighting</span></div>
+                  <div class="card__body">
+                    <h4>LED lighting</h4>
+                    <p>Bulbs, battens, panel lights, downlights and outdoor lights.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Wattage</dt><dd>[5] W to [40] W</dd></div>
+                      <div><dt>Colour</dt><dd>Cool white, warm white</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about LED lighting</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: fans -->
+                  <div class="ph-img ph--slate" role="img" aria-label="Photo placeholder: ceiling fan"><span>Fans</span></div>
+                  <div class="card__body">
+                    <h4>Ceiling and exhaust fans</h4>
+                    <p>Ceiling, wall and exhaust fans for homes and kitchens.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>900, 1200 mm sweep</dd></div>
+                      <div><dt>Type</dt><dd>[Standard / BLDC]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about ceiling and exhaust fans</span></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="panel-foot">
+                <p>Electricians: share your wiring list and we will check stock for every item.</p>
+                <a class="link-arrow" href="contact.html#enquiry-form">Send an electrical material list</a>
+              </div>
+            </section>
+
+            <!-- ========== PANEL 5: HARDWARE ========== -->
+            <section class="tab-panel" id="hardware" aria-labelledby="hardware-title">
+              <div class="panel-head">
+                <div>
+                  <h3 id="hardware-title">Hardware</h3>
+                  <p class="muted">Door and window fittings, tools, fasteners and site materials.</p>
+                  <!-- INSERT BRAND LOGOS HERE or brand names for this category -->
+                  <ul class="panel-meta">
+                    <li><strong>Brands:</strong> [Brand name], [Brand name], [Brand name]</li>
+                    <li><strong>Materials:</strong> Stainless steel, brass, mild steel</li>
+                  </ul>
+                </div>
+                <a class="btn btn--primary" href="contact.html#enquiry-form">Enquire about hardware</a>
+              </div>
+
+              <div class="product-grid">
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: door locks and handles -->
+                  <div class="ph-img ph--clay" role="img" aria-label="Photo placeholder: mortise door lock and handle"><span>Locks</span></div>
+                  <div class="card__body">
+                    <h4>Door locks and handles</h4>
+                    <p>Mortise locks, cylinder locks, padlocks and pull handles.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Finish</dt><dd>Stainless steel, brass, antique</dd></div>
+                      <div><dt>Sizes</dt><dd>[Size range]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about door locks and handles</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: hinges and bolts -->
+                  <div class="ph-img ph--stone" role="img" aria-label="Photo placeholder: steel hinges and tower bolts"><span>Hinges</span></div>
+                  <div class="card__body">
+                    <h4>Hinges, tower bolts and stoppers</h4>
+                    <p>Fittings for wooden and steel doors, windows and cabinets.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>3 in to 6 in</dd></div>
+                      <div><dt>Material</dt><dd>Stainless steel, mild steel</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about hinges, tower bolts and stoppers</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: tools -->
+                  <div class="ph-img ph--slate" role="img" aria-label="Photo placeholder: hand tools and a power drill"><span>Tools</span></div>
+                  <div class="card__body">
+                    <h4>Hand and power tools</h4>
+                    <p>Hammers, spanners, tile cutters, drills and accessories.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Types</dt><dd>Hand tools, power tools, bits</dd></div>
+                      <div><dt>Warranty</dt><dd>[As per manufacturer]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about hand and power tools</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: fasteners -->
+                  <div class="ph-img ph--stone ph--mosaic" role="img" aria-label="Photo placeholder: screws, bolts and wall plugs"><span>Fasteners</span></div>
+                  <div class="card__body">
+                    <h4>Fasteners and anchors</h4>
+                    <p>Screws, nuts, bolts, wall plugs and anchor fasteners.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Sizes</dt><dd>[Size range]</dd></div>
+                      <div><dt>Packing</dt><dd>Loose, boxes of [XX]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about fasteners and anchors</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: construction hardware -->
+                  <div class="ph-img ph--clay ph--mosaic" role="img" aria-label="Photo placeholder: binding wire and nails"><span>Site hardware</span></div>
+                  <div class="card__body">
+                    <h4>Construction hardware</h4>
+                    <p>Binding wire, nails, chicken mesh and other site materials.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Units</dt><dd>By kg, roll or box</dd></div>
+                      <div><dt>Gauge</dt><dd>[Gauge range]</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about construction hardware</span></a>
+                  </div>
+                </article>
+
+                <article class="card product">
+                  <!-- ADD PRODUCT IMAGES HERE: adhesives and grout -->
+                  <div class="ph-img ph--marble" role="img" aria-label="Photo placeholder: bags of tile adhesive and grout"><span>Adhesives</span></div>
+                  <div class="card__body">
+                    <h4>Tile adhesive, grout and sealants</h4>
+                    <p>Cement-based adhesive, epoxy grout and silicone sealants.</p>
+                    <dl class="specs">
+                      <div><dt>Brand</dt><dd>[Brand name]</dd></div>
+                      <div><dt>Packing</dt><dd>[20 kg] bags, [1 kg] packs</dd></div>
+                      <div><dt>Colours</dt><dd>Grout in [XX] shades</dd></div>
+                      <div><dt>Price</dt><dd class="price">On request</dd></div>
+                    </dl>
+                    <a class="link-arrow" href="contact.html#enquiry-form">Enquire<span class="visually-hidden"> about tile adhesive, grout and sealants</span></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="panel-foot">
+                <p>Looking for a specific fitting? Send a photo of the item on WhatsApp.</p>
+                <!-- INSERT WHATSAPP LINK HERE -->
+                <a class="link-arrow" href="https://wa.me/910000000000">Send a photo on WhatsApp</a>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BUYING TIPS ===================== -->
+    <section class="section section--surface" aria-labelledby="tips-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Before you order</p>
+          <h2 id="tips-title">Four details that make ordering easier</h2>
+        </div>
+
+        <div class="grid grid--4">
+          <div class="tip">
+            <h3>Measure the area</h3>
+            <p>Measure each room in square feet or metres. Add 5&ndash;10% extra tiles for cutting and breakage.</p>
+          </div>
+          <div class="tip">
+            <h3>Buy from one batch</h3>
+            <p>Tile shades can change between batches. Buy all tiles for one area in a single order.</p>
+          </div>
+          <div class="tip">
+            <h3>Note the product code</h3>
+            <p>Write down the brand, product code, size and finish, or send a clear photo of the item.</p>
+          </div>
+          <div class="tip">
+            <h3>Share site details</h3>
+            <p>Tell us the delivery location, floor level and access for unloading, if you need delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ENQUIRY CTA ===================== -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band on-dark">
+          <div>
+            <h2 id="cta-title">Cannot find what you need?</h2>
+            <p>We stock more items than we can show here. Tell us the product, brand, size and quantity, and we will check availability for you.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="contact.html#enquiry-form">Send an enquiry</a>
+            <!-- INSERT PHONE NUMBER HERE -->
+            <a class="btn btn--outline-light" href="tel:+910000000000">Call +91 00000 00000</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer on-dark">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <!-- INSERT LOGO HERE (light version for dark background) -->
+            <span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            <span class="brand__text">
+              <!-- INSERT BUSINESS NAME HERE -->
+              <span class="brand__name">Your Business Name</span>
+              <span class="brand__tag">Tiles &amp; Building Materials</span>
+            </span>
+          </a>
+          <p>Dealer and distributor of tiles, sanitaryware, plumbing, electrical and hardware products in [City].</p>
+          <!-- INSERT BUSINESS ADDRESS HERE -->
+          <address>
+            [Shop / Building No.], [Street Name]<br>
+            [Area], [City] &ndash; [PIN Code]<br>
+            [State], India
+          </address>
+        </div>
+
+        <nav aria-labelledby="footer-pages-title">
+          <h2 class="footer-title" id="footer-pages-title">Quick links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="brands-services.html">Brands &amp; Services</a></li>
+            <li><a href="contact.html">Contact &amp; Enquiry</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-products-title">
+          <h2 class="footer-title" id="footer-products-title">Products</h2>
+          <ul class="footer-links">
+            <li><a href="products.html#tiles">Tiles</a></li>
+            <li><a href="products.html#sanitaryware">Sanitaryware</a></li>
+            <li><a href="products.html#plumbing">Plumbing</a></li>
+            <li><a href="products.html#electricals">Electricals</a></li>
+            <li><a href="products.html#hardware">Hardware</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer-title">Contact</h2>
+          <ul class="footer-links">
+            <!-- INSERT PHONE NUMBER HERE -->
+            <li><a href="tel:+910000000000">Phone: +91 00000 00000</a></li>
+            <!-- INSERT WHATSAPP LINK HERE -->
+            <li><a href="https://wa.me/910000000000">WhatsApp: +91 00000 00000</a></li>
+            <!-- INSERT EMAIL HERE -->
+            <li><a href="mailto:enquiry@example.com">enquiry@example.com</a></li>
+            <li>Mon&ndash;Sat: [9:30 AM &ndash; 8:00 PM]<br>Sunday: [Closed]</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; [Year] Your Business Name. All rights reserved.</p>
+        <p>Prices and stock change often. Please contact us for current details.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick-contact bar: shows only on phones and small tablets -->
+  <nav class="quick-actions on-dark" aria-label="Quick contact">
+    <ul>
+      <!-- INSERT PHONE NUMBER HERE -->
+      <li><a href="tel:+910000000000">Call us</a></li>
+      <!-- INSERT WHATSAPP LINK HERE -->
+      <li><a href="https://wa.me/910000000000">WhatsApp</a></li>
+      <li><a href="contact.html#enquiry-form">Send enquiry</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
