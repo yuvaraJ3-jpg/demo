@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Tile &amp; Sanitary Website Solutions | KoteMane Innovations</title>
+  
+  <style>
+    /* =========================================================
+       DESIGN TOKENS - Consistent, disciplined palette
+       ========================================================= */
+    :root {
+      --primary: #1f3a5f;
+      --primary-dark: #0f233a;
+      --accent: #b8860b;
+      --accent-hover: #9d7208;
+      --accent-light: #fef9e7;
+      --whatsapp: #16a34a;
+      --whatsapp-dark: #15803d;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 1px 3px rgba(15, 35, 58, 0.04);
+      --shadow: 0 4px 16px rgba(15, 35, 58, 0.05);
+      --shadow-lg: 0 8px 30px rgba(15, 35, 58, 0.08);
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 15px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* =========================================================
+       TYPOGRAPHY & SECTION HEADERS
+       ========================================================= */
+    .section {
+      padding: 72px 0;
+    }
+
+    .section-alt {
+      background: #f1f5f9;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 44px;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      background: var(--accent-light);
+      border: 1px solid #fde68a;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 3.5vw, 32px);
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      font-size: clamp(14px, 2vw, 16px);
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* =========================================================
+       NAVIGATION BAR
+       ========================================================= */
+    header.site-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 64px;
+      padding: 8px 0;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .brand-monogram {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #1f3a5f 0%, #0f233a 100%);
+      color: #fef08a;
+      font-size: 14px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(15, 35, 58, 0.15);
+      flex-shrink: 0;
+    }
+
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.15;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-tagline {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-demo-link {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s ease;
+    }
+    .nav-demo-link:hover {
+      background: #f1f5f9;
+      color: var(--accent);
+    }
+
+    .nav-whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 16px;
+      font-size: 13.5px;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      background: var(--whatsapp);
+      color: #ffffff;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+      transition: all 0.15s ease;
+    }
+    .nav-whatsapp-btn:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);
+      color: #fff;
+    }
+
+    /* =========================================================
+       HERO SECTION
+       ========================================================= */
+    .hero {
+      background: linear-gradient(180deg, #0d1e34 0%, #152c48 100%);
+      color: #ffffff;
+      padding: 72px 0 84px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #e2e8f0;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 22px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #f59e0b;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 4.5vw, 44px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      letter-spacing: -0.025em;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero p {
+      font-size: clamp(15px, 2.2vw, 17px);
+      color: #cbd5e1;
+      max-width: 680px;
+      margin: 0 auto 34px;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 24px;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--accent);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(184, 134, 11, 0.35);
+      transition: all 0.15s ease;
+    }
+    .btn-hero-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(184, 134, 11, 0.45);
+      color: #fff;
+    }
+
+    .btn-hero-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 24px;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--whatsapp);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(22, 163, 74, 0.3);
+      transition: all 0.15s ease;
+    }
+    .btn-hero-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(22, 163, 74, 0.45);
+      color: #fff;
+    }
+
+    .hero-sub-note {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .hero-sub-note a {
+      color: #fef08a;
+      text-decoration: underline;
+      font-weight: 600;
+      margin-left: 4px;
+    }
+
+    /* =========================================================
+       STATS BAR - Elevated floating card
+       ========================================================= */
+    .stats-outer {
+      max-width: 1060px;
+      margin: -38px auto 0;
+      padding: 0 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .stats-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 24px 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .stat-item:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .stat-num {
+      font-size: clamp(24px, 3.5vw, 30px);
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .stat-lbl {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      line-height: 1.35;
+    }
+
+    /* =========================================================
+       TEMPLATE CARDS - Uniform, elegant, balanced
+       ========================================================= */
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .template-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .template-box:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .template-header {
+      padding: 16px 20px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .template-name {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .template-pill {
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .template-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .color-swatch-strip {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 12px;
+    }
+
+    .swatch-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .swatch-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .template-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .feature-checklist {
+      list-style: none;
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+
+    .feature-checklist li {
+      font-size: 13px;
+      color: #334155;
+      margin-bottom: 7px;
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+    }
+
+    .check-icon {
+      color: var(--whatsapp);
+      font-weight: 800;
+      flex-shrink: 0;
+      line-height: 1.2;
+    }
+
+    .template-actions {
+      padding: 14px 20px;
+      background: #f8fafc;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-template-demo {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 12px;
+      font-size: 12.5px;
+      font-weight: 700;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .btn-template-demo:hover {
+      background: #f1f5f9;
+      border-color: var(--primary);
+    }
+
+    .btn-template-select {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 14px;
+      font-size: 12.5px;
+      font-weight: 700;
+      background: var(--whatsapp);
+      color: #ffffff;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .btn-template-select:hover {
+      background: var(--whatsapp-dark);
+      color: #fff;
+    }
+
+    /* =========================================================
+       5-PAGE STRUCTURE SECTION - Clean Card Deck
+       ========================================================= */
+    .pages-deck {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin: 24px 0 28px;
+    }
+
+    .page-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 18px 14px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .page-num {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .page-heading {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .page-snippet {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* =========================================================
+       PRICING CARD - Clean & Clear
+       ========================================================= */
+    .pricing-wrap {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      background: #ffffff;
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .pricing-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #92400e;
+      background: var(--accent-light);
+      padding: 4px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .pricing-amount {
+      font-size: clamp(38px, 6vw, 48px);
+      font-weight: 800;
+      color: var(--primary);
+      margin: 14px 0 4px;
+      line-height: 1;
+    }
+
+    .pricing-cadence {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .pricing-checklist {
+      list-style: none;
+      text-align: left;
+      max-width: 440px;
+      margin: 0 auto 28px;
+    }
+
+    .pricing-checklist li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 14px;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pricing-checklist li:last-child {
+      border-bottom: none;
+    }
+
+    /* =========================================================
+       CONTACT SECTION & HARD OVERRIDE FOR GOOGLE FORM
+       ========================================================= */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* Left Sidebar */
+    .contact-sidebar {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 84px;
+    }
+
+    .sidebar-title {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .btn-sidebar-whatsapp {
+      width: 100%;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--whatsapp);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      box-shadow: 0 2px 10px rgba(22, 163, 74, 0.25);
+      margin-bottom: 20px;
+      transition: all 0.15s ease;
+    }
+    .btn-sidebar-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      color: #fff;
+    }
+
+    .value-list {
+      list-style: none;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      font-size: 12.5px;
+      color: #475569;
+    }
+
+    .value-list li {
+      margin-bottom: 10px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      line-height: 1.4;
+    }
+
+    /* Right: Google Form Hard Override Host Card */
+    .form-host-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .form-host-header {
+      padding: 20px 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .form-host-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .form-host-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* 
+       HARD OVERRIDE CONTAINER FOR GOOGLE FORM
+       - Clips top purple banner and outer padding
+       - Seamless scroll inside white background frame
+    */
+    .form-frame-crop {
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+      position: relative;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+    }
+
+    .form-frame-crop iframe {
+      width: 100%;
+      max-width: 460px;
+      height: 640px;
+      border: none;
+      display: block;
+      background: #ffffff;
+      margin-top: -15px;
+    }
+
+    /* =========================================================
+       FLOATING WHATSAPP BUTTON (Mobile Safe)
+       ========================================================= */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--whatsapp);
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 13.5px;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(22, 163, 74, 0.4);
+      z-index: 999;
+      transition: all 0.2s ease;
+    }
+    .floating-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(22, 163, 74, 0.55);
+      color: #fff;
+    }
+    .floating-whatsapp svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    footer.site-footer {
+      background: var(--primary-dark);
+      color: #94a3b8;
+      padding: 36px 0;
+      text-align: center;
+      font-size: 13px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    footer.site-footer a {
+      color: #cbd5e1;
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       MOBILE-FIRST RESPONSIVE BREAKPOINTS (max-width: 900px)
+       ========================================================= */
+    @media (max-width: 900px) {
+      .container { padding: 0 16px; }
+      .section { padding: 48px 0; }
+
+      /* Nav */
+      .nav-inner { min-height: 56px; }
+      .nav-demo-link { display: none; }
+      .brand-name { font-size: 14.5px; }
+      .brand-tagline { font-size: 10px; }
+      .nav-whatsapp-btn { padding: 7px 12px; font-size: 12px; }
+
+      /* Hero */
+      .hero { padding: 48px 0 56px; }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        gap: 10px;
+      }
+      .btn-hero-primary,
+      .btn-hero-whatsapp {
+        width: 100%;
+        min-height: 46px;
+        font-size: 14px;
+      }
+
+      /* Stats */
+      .stats-outer { margin-top: -24px; padding: 0 14px; }
+      .stats-card {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        padding: 16px 12px;
+      }
+      .stat-item { padding: 6px; }
+      .stat-item:nth-child(2)::after { display: none; }
+      .stat-num { font-size: 24px; }
+      .stat-lbl { font-size: 11.5px; }
+
+      /* Templates Grid */
+      .templates-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      /* 5-Page Structure */
+      .pages-deck {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .page-card {
+        padding: 14px 16px;
+        text-align: left;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+      }
+      .page-num {
+        font-size: 14px;
+        margin-bottom: 0;
+        min-width: 24px;
+      }
+
+      /* Pricing */
+      .pricing-card { padding: 28px 18px; }
+
+      /* Contact Layout */
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .contact-sidebar { position: static; }
+
+      /* Google Form Crop on Mobile */
+      .form-frame-crop {
+        height: 610px;
+      }
+      .form-frame-crop iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 650px;
+      }
+
+      /* Floating WhatsApp Icon */
+      .floating-whatsapp {
+        bottom: 16px;
+        right: 16px;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+      }
+      .floating-whatsapp span { display: none; }
+      .floating-whatsapp svg { width: 24px; height: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/919945293303?text=Hi%2C%20I%20saw%20your%20Tile%20%26%20Sanitary%20website%20demo%20and%20would%20like%20to%20know%20more." 
+     target="_blank" 
+     class="floating-whatsapp"
+     aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.031 2C6.496 2 2 6.496 2 12.031c0 1.974.57 3.815 1.557 5.378L2.094 22l4.757-1.427A10.007 10.007 0 0 0 12.03 22c5.535 0 10.03-4.496 10.03-10.031S17.566 2 12.031 2zm5.82 14.282c-.244.686-1.42 1.309-1.956 1.368-.506.055-1.157.08-3.693-.974-3.238-1.344-5.323-4.662-5.485-4.877-.161-.215-1.309-1.742-1.309-3.324 0-1.582.827-2.36 1.121-2.678.294-.318.643-.398.858-.398.214 0 .429.003.616.012.199.01.464-.076.726.554.275.66.938 2.29.102 2.457.084.167.14.364.028.587-.112.223-.168.364-.336.56-.168.196-.353.438-.504.588-.168.168-.344.351-.148.687.196.336.872 1.436 1.868 2.325 1.282 1.144 2.362 1.498 2.698 1.666.336.168.532.14.728-.084.196-.224.84-1.008 1.064-1.353.224-.345.448-.28.756-.168.308.112 1.96.924 2.296 1.092.336.168.56.252.644.392.084.14.084.812-.16 1.498z"/>
+    </svg>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- Top Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#" class="brand-mark">
+        <span class="brand-monogram">KM</span>
+        <span class="brand-text-wrap">
+          <strong class="brand-name">KoteMane Innovations</strong>
+          <span class="brand-tagline">Tile &amp; Sanitary Web Studio</span>
+        </span>
+      </a>
+      <div class="nav-actions">
+        <a href="https://yuvaraj3-jpg.github.io/demo/" target="_blank" class="nav-demo-link">
+          Live 5-Page Demo ↗
+        </a>
+        <a href="https://wa.me/919945293303?text=Hi%2C%20I%20am%20interested%20in%20a%20website%20for%20my%20tile%20and%20sanitary%20showroom." target="_blank" class="nav-whatsapp-btn">
+          💬 WhatsApp Enquiry
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>Built for Tile &amp; Sanitary Showrooms</span>
+      </div>
+      <h1>Turn Online Searchers into Showroom Walk-Ins</h1>
+      <p>Clean, mobile-fast websites tailored specifically for tile distributors, ceramic dealers, and sanitaryware showrooms in Karnataka and across India.</p>
+      
+      <div class="hero-actions">
+        <a href="https://yuvaraj3-jpg.github.io/demo/" target="_blank" class="btn-hero-primary">
+          🚀 Explore Live 5-Page Demo
+        </a>
+        <a href="https://wa.me/919945293303?text=Hi%2C%20I%20would%20like%20to%20discuss%20a%20website%20for%20my%20tile%20showroom." target="_blank" class="btn-hero-whatsapp">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="hero-sub-note">
+        <span>Need a tailored setup?</span>
+        <a href="#contact-section">Fill the 1-minute showroom enquiry form ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Stats Card -->
+  <div class="stats-outer">
+    <div class="stats-card">
+      <div class="stat-item">
+        <div class="stat-num">84%</div>
+        <div class="stat-lbl">Homeowners &amp; builders search Google before visiting tile shops</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4–6 Days</div>
+        <div class="stat-lbl">Turnaround time from photo receipt to final handover</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1-Tap</div>
+        <div class="stat-lbl">Direct WhatsApp enquiry and Google Map showroom navigation</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">₹22,000</div>
+        <div class="stat-lbl">Complete all-inclusive package with zero hidden costs</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 1: The 3 Template Designs -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Design Templates</span>
+        <h2 class="section-title">Choose from 3 Proven Design Templates</h2>
+        <p class="section-subtitle">Every dealer has a unique personality. Choose the layout that best represents your showroom branding.</p>
+      </div>
+
+      <div class="templates-grid">
+        
+        <!-- Template 1 -->
+        <div class="template-box">
+          <div class="template-header">
+            <span class="template-name">1. Classic Elegance</span>
+            <span class="template-pill" style="background:#e0e7ff; color:#3730a3;">High Trust</span>
+          </div>
+          <div class="template-body">
+            <div class="color-swatch-strip">
+              <span class="swatch-dot" style="background:#1f3a5f;"></span>
+              <span class="swatch-dot" style="background:#b8860b;"></span>
+              <span class="swatch-desc">Navy Blue &amp; Warm Gold</span>
+            </div>
+            <p class="template-desc">
+              Designed for established distributors and family showrooms with strong legacy and authorized dealership credentials.
+            </p>
+            <ul class="feature-checklist">
+              <li><span class="check-icon">✓</span> High-authority serif typography</li>
+              <li><span class="check-icon">✓</span> Showroom legacy &amp; brand trust badges</li>
+              <li><span class="check-icon">✓</span> Full-width featured category section</li>
+              <li><span class="check-icon">✓</span> Clear showroom location &amp; hours</li>
+            </ul>
+          </div>
+          <div class="template-actions">
+            <a href="https://yuvaraj3-jpg.github.io/demo/template-1-classic.html" target="_blank" class="btn-template-demo">
+              Live Demo ↗
+            </a>
+            <a href="https://wa.me/919945293303?text=Hi%2C%20I%20like%20Template%201%20(Classic%20Navy%20%26%20Gold)%20for%20my%20showroom.%20Please%20share%20details." target="_blank" class="btn-template-select">
+              💬 Select
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 2 -->
+        <div class="template-box">
+          <div class="template-header">
+            <span class="template-name">2. Modern Sectioned</span>
+            <span class="template-pill" style="background:#fee2e2; color:#991b1b;">Contemporary</span>
+          </div>
+          <div class="template-body">
+            <div class="color-swatch-strip">
+              <span class="swatch-dot" style="background:#2f3437;"></span>
+              <span class="swatch-dot" style="background:#c0562f;"></span>
+              <span class="swatch-desc">Charcoal &amp; Terracotta</span>
+            </div>
+            <p class="template-desc">
+              Modular card blocks over soft grey background. Clean, modern aesthetic that appeals to young homeowners and interior designers.
+            </p>
+            <ul class="feature-checklist">
+              <li><span class="check-icon">✓</span> Sectioned block layout for easy scrolling</li>
+              <li><span class="check-icon">✓</span> Vitrified, Ceramic &amp; Sanitary cards</li>
+              <li><span class="check-icon">✓</span> Highlights strip with contractor benefits</li>
+              <li><span class="check-icon">✓</span> 1-Click call &amp; WhatsApp actions</li>
+            </ul>
+          </div>
+          <div class="template-actions">
+            <a href="https://yuvaraj3-jpg.github.io/demo/template-2-sectioned.html" target="_blank" class="btn-template-demo">
+              Live Demo ↗
+            </a>
+            <a href="https://wa.me/919945293303?text=Hi%2C%20I%20like%20Template%202%20(Modern%20Sectioned%20Charcoal)%20for%20my%20showroom.%20Please%20share%20details." target="_blank" class="btn-template-select">
+              💬 Select
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 3 -->
+        <div class="template-box">
+          <div class="template-header">
+            <span class="template-name">3. Category-Focused</span>
+            <span class="template-pill" style="background:#ccfbf1; color:#115e59;">High Conversion</span>
+          </div>
+          <div class="template-body">
+            <div class="color-swatch-strip">
+              <span class="swatch-dot" style="background:#0f5257;"></span>
+              <span class="swatch-dot" style="background:#e09f3e;"></span>
+              <span class="swatch-desc">Deep Teal &amp; Amber</span>
+            </div>
+            <p class="template-desc">
+              Puts product categories immediately after the hero banner. Fast visual browsing for clients looking for specific tile sizes or sanitary models.
+            </p>
+            <ul class="feature-checklist">
+              <li><span class="check-icon">✓</span> Category catalog grid above the fold</li>
+              <li><span class="check-icon">✓</span> Floor tiles, wall tiles, bathroom fittings</li>
+              <li><span class="check-icon">✓</span> WhatsApp quote button on every product</li>
+              <li><span class="check-icon">✓</span> Quick showroom directions</li>
+            </ul>
+          </div>
+          <div class="template-actions">
+            <a href="https://yuvaraj3-jpg.github.io/demo/template-3-category-focused.html" target="_blank" class="btn-template-demo">
+              Live Demo ↗
+            </a>
+            <a href="https://wa.me/919945293303?text=Hi%2C%20I%20like%20Template%203%20(Category-Focused%20Teal)%20for%20my%20showroom.%20Please%20share%20details." target="_blank" class="btn-template-select">
+              💬 Select
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Complete 5-Page Architecture -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Website Deliverables</span>
+        <h2 class="section-title">The Complete 5-Page Showroom Website</h2>
+        <p class="section-subtitle">Everything a tile showroom needs to establish local authority and capture contractor &amp; retail enquiries.</p>
+      </div>
+
+      <div class="pages-deck">
+        <div class="page-card">
+          <div class="page-num">01</div>
+          <div>
+            <div class="page-heading">Home Page</div>
+            <div class="page-snippet">Hero display, showroom introduction, featured tiles &amp; fast actions</div>
+          </div>
+        </div>
+        <div class="page-card">
+          <div class="page-num">02</div>
+          <div>
+            <div class="page-heading">Products Page</div>
+            <div class="page-snippet">Vitrified, wall tiles, sanitaryware, CP fittings &amp; pipes</div>
+          </div>
+        </div>
+        <div class="page-card">
+          <div class="page-num">03</div>
+          <div>
+            <div class="page-heading">About Us</div>
+            <div class="page-snippet">Showroom history, wholesale &amp; retail promise, certificates</div>
+          </div>
+        </div>
+        <div class="page-card">
+          <div class="page-num">04</div>
+          <div>
+            <div class="page-heading">Brands &amp; Services</div>
+            <div class="page-snippet">Kajaria, Somany, Jaquar, Astral logos + contractor assistance</div>
+          </div>
+        </div>
+        <div class="page-card">
+          <div class="page-num">05</div>
+          <div>
+            <div class="page-heading">Contact &amp; Maps</div>
+            <div class="page-snippet">Interactive Google Map, opening hours &amp; WhatsApp connect</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="https://yuvaraj3-jpg.github.io/demo/" target="_blank" class="btn-hero-primary" style="background:var(--primary); box-shadow:none;">
+          🌐 Explore the Live 5-Page Website Prototype
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Package & Commercials -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Transparent Pricing</span>
+        <h2 class="section-title">All-Inclusive Standard Package</h2>
+        <p class="section-subtitle">Simple, one-time investment with rapid delivery and zero technical hassle.</p>
+      </div>
+
+      <div class="pricing-wrap">
+        <div class="pricing-card">
+          <span class="pricing-tag">Standard Website Package</span>
+          <div class="pricing-amount">₹ 22,000</div>
+          <div class="pricing-cadence">One-time investment &bull; Handover in 4–6 working days</div>
+
+          <ul class="pricing-checklist">
+            <li><span class="check-icon">✓</span> Complete 5-Page Custom Website</li>
+            <li><span class="check-icon">✓</span> Direct WhatsApp Enquiry Button + Google Map</li>
+            <li><span class="check-icon">✓</span> 100% Mobile Responsive + Local Search SEO</li>
+            <li><span class="check-icon">✓</span> Up to 20 Showroom Photos Included</li>
+            <li><span class="check-icon">✓</span> 2 Rounds of Minor Revisions &amp; Handover Walkthrough</li>
+          </ul>
+
+          <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+            <a href="https://wa.me/919945293303?text=Hi%2C%20I%20would%20like%20to%20book%20the%20%E2%82%B922%2C000%20Standard%20Website%20Package%20for%20my%20tile%20business." target="_blank" class="btn-hero-whatsapp" style="width:100%; max-width:320px;">
+              💬 Book Package via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Contact & Hard-Overridden Google Form -->
+  <section class="section section-alt" id="contact-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 34px;">
+        <span class="section-kicker">Showroom Intake</span>
+        <h2 class="section-title">Ready to Launch Your Showroom Website?</h2>
+        <p class="section-subtitle">Submit your showroom details in the form below. We will set up your custom preview link and quotation.</p>
+      </div>
+
+      <div class="contact-layout">
+        
+        <!-- Left Sidebar: Direct WhatsApp Connect -->
+        <aside class="contact-sidebar">
+          <div class="sidebar-title">
+            <span>💬 Direct WhatsApp Connect</span>
+          </div>
+          <p class="sidebar-desc">
+            Prefer chatting directly or sending showroom pictures &amp; visiting cards? Message our team on WhatsApp:
+          </p>
+          <a href="https://wa.me/919945293303?text=Hi%2C%20I%20am%20interested%20in%20a%20website%20for%20my%20tile%20%26%20sanitary%20showroom." target="_blank" class="btn-sidebar-whatsapp">
+            💬 Start WhatsApp Chat
+          </a>
+
+          <ul class="value-list">
+            <li>
+              <span style="color:var(--whatsapp); font-weight:bold;">⚡</span>
+              <span><strong>4–6 Days Delivery:</strong> Quick turnaround once logo &amp; photos are shared.</span>
+            </li>
+            <li>
+              <span style="color:var(--whatsapp); font-weight:bold;">📱</span>
+              <span><strong>100% Mobile Ready:</strong> Tested on all modern Android &amp; iOS devices.</span>
+            </li>
+            <li>
+              <span style="color:var(--whatsapp); font-weight:bold;">🎯</span>
+              <span><strong>Local Search SEO:</strong> Captures local tile &amp; sanitary buyers on Google.</span>
+            </li>
+            <li>
+              <span style="color:var(--whatsapp); font-weight:bold;">🛡️</span>
+              <span><strong>Transparent Investment:</strong> Complete 5 pages with zero hidden maintenance.</span>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Right: Integrated Form Container (Hard Overrides Google Form Frame) -->
+        <main class="form-host-card" id="enquiry-form">
+          <div class="form-host-header">
+            <div class="form-host-title">📋 Showroom Website Enquiry Form</div>
+            <div class="form-host-sub">Fill in your showroom name, location, and preferred brands. We'll prepare your personalized demo &amp; quote.</div>
+          </div>
+
+          <!-- 
+            Seamless frame crop:
+            Clips Google's redundant top banner while seamlessly locking the form inside our white card container
+          -->
+          <div class="form-frame-crop">
+            <iframe 
+              id="googleFormIframe" 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfDzNBGdmBVmT74nHTdDMEpne7Wb-CWe9yA84kYtsa0Jv0_AA/viewform?embedded=true" 
+              width="400" 
+              height="600" 
+              frameborder="0" 
+              marginheight="0" 
+              marginwidth="0" 
+              title="Tile Showroom Website Enquiry Form">
+              Loading enquiry form...
+            </iframe>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>KoteMane Innovations</strong> &bull; Custom Website Solutions for Tile, Sanitaryware &amp; Hardware Dealers</p>
+      <p style="margin-top:8px; font-size:12px;">
+        Live Prototypes: 
+        <a href="https://yuvaraj3-jpg.github.io/demo/">Main 5-Page Site</a> &bull; 
+        <a href="https://yuvaraj3-jpg.github.io/demo/template-1-classic.html">Classic Demo</a> &bull; 
+        <a href="https://yuvaraj3-jpg.github.io/demo/template-2-sectioned.html">Sectioned Demo</a> &bull; 
+        <a href="https://yuvaraj3-jpg.github.io/demo/template-3-category-focused.html">Category Demo</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
